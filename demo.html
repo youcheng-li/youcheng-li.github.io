@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Breast Ultrasound Generative Model</title>
+    <style>
+        /* 全局样式和重置 */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: sans-serif, Arial;
+            background-color: #e1e1f0;
+        }
+
+        /* 容器和布局 */
+        .demo {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .nav-placeholder {
+            background-color: #2a3275;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fafaf9;
+            color: #20232a;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            color: #20232a;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1em;
+            text-align: center;
+            color: #20232a;
+        }
+
+        .content-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 32px;
+            padding: 30px 0;
+        }
+
+        .img-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .left-box {
+            background-color: #d3d3d3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            border: 2px dashed #bbb;
+            position: relative;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .bounding-box {
+            position: absolute;
+            border: 2px solid red;
+            pointer-events: none;
+            /* 初始隐藏 */
+            display: none;
+        }
+
+        .image-placeholder {
+            color: #888;
+            font-size: 1.2em;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* 右侧控制面板 */
+        .right-box {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #666666;
+        }
+
+        .dropdown {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #20232a;
+            border-radius: 4px;
+            font-size: 16px;
+            background: #f9f9f9;
+            cursor: pointer;
+        }
+
+        .bbox-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 12px;
+        }
+
+        .bbox-table td {
+            padding: 0;
+        }
+
+        .bbox-table label {
+            font-size: 14px;
+            margin-right: 8px;
+            display: inline-block;
+            width: 30px;
+            /* 对齐标签 */
+        }
+
+        .bbox-input {
+            width: calc(100% - 45px);
+            /* 减去标签和间距的宽度 */
+            padding: 6px;
+            border: 1px solid #20232a;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 12px 10px;
+            font-size: 1em;
+            background-color: #2a3275;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .buttons button:hover {
+            background-color: #1d2351;
+        }
+
+        .buttons button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .right-box-button {
+            background-color: #5a62a5 !important;
+        }
+
+        .right-box-button:hover {
+            background-color: #4b5188 !important;
+        }
+
+        .timer,
+        .error {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 8px;
+            min-height: 1.2em;
+            /* 预留空间防止布局抖动 */
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="demo">
+        <nav class="nav-placeholder">
+            Breast Ultrasound Foundational Generative Model
+            Demo
+        </nav>
+
+        <div class="main-content">
+            <div class="container">
+                <h1>Breast Ultrasound Generative Model</h1>
+                <p style="font-size: 1.5em">You can generate
+                    images featuring various pathologies,
+                    imaging devices, and bounding boxes, all
+                    of which can be downloaded.</p>
+
+                <div class="content-boxes">
+                    <div class="img-wrapper">
+                        <div class="left-box"
+                             id="image-box-1">
+                            <div class="image-placeholder">
+                                No Image Available</div>
+                        </div>
+                        <div class="left-box"
+                             id="image-box-2">
+                            <div class="image-placeholder">
+                                No Image Available</div>
+                            <div class="bounding-box"
+                                 id="bounding-box"></div>
+                        </div>
+                    </div>
+
+                    <div class="right-box">
+                        <div>
+                            <label for="pathology"
+                                   class="input-label">Pathology:</label>
+                            <select id="pathology"
+                                    class="dropdown">
+                                <option value="0"
+                                        selected>Benign
+                                </option>
+                                <option value="1">Malignant
+                                </option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="device"
+                                   class="input-label">Device:</label>
+                            <select id="device"
+                                    class="dropdown">
+                                <option value="1"
+                                        selected>
+                                    Siemens-ACUSON-Oxana
+                                </option>
+                                <option value="13">
+                                    Siemens-ACUSON-NX3-Elite
+                                </option>
+                                <option value="2">
+                                    GE-LOGIQ-E9</option>
+                                <option value="7">
+                                    GE-EDVoluson-E8-Expert
+                                </option>
+                                <option value="5">
+                                    Philips-EPIQ7</option>
+                                <option value="11">
+                                    Mindray-M9</option>
+                                <option value="15">
+                                    Mindray-Resona-R9
+                                </option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="bbox"
+                                   class="input-label">Bounding
+                                Box:</label>
+                            <div class="bbox-container">
+                                <table class="bbox-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label
+                                                       for="x1">X1:</label>
+                                                <input id="x1"
+                                                       type="number"
+                                                       step="0.0001"
+                                                       min="0"
+                                                       max="1"
+                                                       class="bbox-input"
+                                                       value="0.1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label
+                                                       for="y1">Y1:</label>
+                                                <input id="y1"
+                                                       type="number"
+                                                       step="0.0001"
+                                                       min="0"
+                                                       max="1"
+                                                       class="bbox-input"
+                                                       value="0.1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label
+                                                       for="x2">X2:</label>
+                                                <input id="x2"
+                                                       type="number"
+                                                       step="0.0001"
+                                                       min="0"
+                                                       max="1"
+                                                       class="bbox-input"
+                                                       value="0.9">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label
+                                                       for="y2">Y2:</label>
+                                                <input id="y2"
+                                                       type="number"
+                                                       step="0.0001"
+                                                       min="0"
+                                                       max="1"
+                                                       class="bbox-input"
+                                                       value="0.9">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <button
+                                    id="generate-btn">Generate
+                                Image</button>
+                            <button id="random-box-btn"
+                                    class="right-box-button">Random
+                                Benign Box</button>
+                            <button id="download-btn"
+                                    disabled>Download
+                                Image</button>
+                            <button id="clear-btn"
+                                    disabled>Clear Generated
+                                Image</button>
+                        </div>
+
+                        <div>
+                            <div class="timer"
+                                 id="timer-log"></div>
+                            <div class="error"
+                                 id="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    The inference process is carried out on
+                    a single NVIDIA A2000 GPU. We recommend
+                    using
+                    <strong style="color: red">Chrome
+                        browser</strong>
+                    for the best experience.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DOM 元素引用 ---
+            const pathologySelect = document.getElementById('pathology');
+            const deviceSelect = document.getElementById('device');
+            const bboxInputs = {
+                x1: document.getElementById('x1'),
+                y1: document.getElementById('y1'),
+                x2: document.getElementById('x2'),
+                y2: document.getElementById('y2'),
+            };
+            const generateBtn = document.getElementById('generate-btn');
+            const randomBoxBtn = document.getElementById('random-box-btn');
+            const downloadBtn = document.getElementById('download-btn');
+            const clearBtn = document.getElementById('clear-btn');
+            const timerLog = document.getElementById('timer-log');
+            const errorMessage = document.getElementById('error-message');
+            const imageBox1 = document.getElementById('image-box-1');
+            const imageBox2 = document.getElementById('image-box-2');
+            const boundingBox = document.getElementById('bounding-box');
+
+            // --- 状态变量 ---
+            let userIP = null;
+            let generatedImage = null;
+            let isGenerating = false;
+            let timer = 0;
+            let timerInterval = null;
+            const deviceDict = {
+                1: 'Siemens-ACUSON-Oxana',
+                2: 'GE-LOGIQ-E9',
+                5: 'Philips-EPIQ7',
+                7: 'GE-EDVoluson-E8-Expert',
+                11: 'Mindray-M9',
+                13: 'Siemens-ACUSON-NX3-Elite',
+                15: 'Mindray-Resona-R9',
+            };
+
+            // --- 功能函数 ---
+
+            /**
+             * 获取用户IP地址
+             */
+            const getUserIP = async () => {
+                try {
+                    const response = await fetch('https://api.ipify.org?format=json');
+                    const data = await response.json();
+                    userIP = data.ip;
+                } catch (error) {
+                    console.error('Error fetching user IP:', error);
+                    errorMessage.textContent = 'Could not fetch user IP.';
+                }
+            };
+
+            /**
+             * 验证 Bounding Box 输入
+             */
+            const validateBbox = (bbox) => {
+                if (bbox.some(v => isNaN(v))) {
+                    errorMessage.textContent = 'Bounding box must have 4 numeric values.';
+                    return false;
+                }
+                if (bbox.some((value) => value < 0 || value > 1)) {
+                    errorMessage.textContent = 'Bounding box values must be between 0 and 1.';
+                    return false;
+                }
+                if (bbox[0] >= bbox[2] || bbox[1] >= bbox[3]) {
+                    errorMessage.textContent = 'Bounding box format must be x1 < x2 and y1 < y2.';
+                    return false;
+                }
+                errorMessage.textContent = '';
+                return true;
+            };
+
+            /**
+             * 更新UI状态
+             */
+            const updateUIState = (generating) => {
+                isGenerating = generating;
+                generateBtn.disabled = generating;
+                randomBoxBtn.disabled = generating;
+                downloadBtn.disabled = generating || !generatedImage;
+                clearBtn.disabled = generating || !generatedImage;
+                generateBtn.textContent = generating ? 'Generating...' : 'Generate Image';
+            };
+
+            /**
+             * 启动计时器和状态日志
+             */
+            const startTimer = () => {
+                timer = 0;
+                timerLog.textContent = 'Waiting for response...';
+                timerInterval = setInterval(() => {
+                    timer += 0.1;
+                    if (timer >= 0 && timer < 5.2) {
+                        timerLog.textContent = `Loading generative model (${timer.toFixed(1)}s)`;
+                    } else if (timer >= 5.2 && timer < 9.1) {
+                        timerLog.textContent = `Sampling image (${timer.toFixed(1)}s)`;
+                    } else {
+                        timerLog.textContent = `Waiting for server response... (${timer.toFixed(1)}s)`;
+                    }
+                }, 100);
+            };
+
+            /**
+             * 停止计时器
+             */
+            const stopTimer = () => {
+                clearInterval(timerInterval);
+                timerInterval = null;
+                timerLog.textContent = '';
+            };
+
+            /**
+             * 更新随机按钮的文本
+             */
+            const updateRandomButtonText = () => {
+                const isBenign = pathologySelect.value === '0';
+                randomBoxBtn.textContent = isBenign ? 'Random Benign Box' : 'Random Malignant Box';
+            };
+
+            /**
+             * 生成图像
+             */
+            const genImage = async () => {
+                const bbox = [
+                    parseFloat(bboxInputs.x1.value),
+                    parseFloat(bboxInputs.y1.value),
+                    parseFloat(bboxInputs.x2.value),
+                    parseFloat(bboxInputs.y2.value),
+                ];
+
+                if (!validateBbox(bbox)) return;
+
+                updateUIState(true);
+                startTimer();
+                clearImageDisplay();
+
+                try {
+                    const response = await fetch('http://localhost:6688/api/gen-image/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            pathology: pathologySelect.value,
+                            device: deviceSelect.value,
+                            bbox: bbox,
+                            IP: userIP,
+                        }),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Server error: ${response.statusText}`);
+                    }
+
+                    const data = await response.json();
+                    generatedImage = data.image;
+                    displayImage(generatedImage, bbox);
+
+                } catch (error) {
+                    console.error('Error generating image:', error);
+                    errorMessage.textContent = 'Failed to generate image. Please try again.';
+                    clearImageDisplay();
+                } finally {
+                    stopTimer();
+                    updateUIState(false);
+                }
+            };
+
+            /**
+             * 获取随机 Bounding Box
+             */
+            const fetchRandomBox = async (url) => {
+                updateUIState(true);
+                errorMessage.textContent = '';
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    const bbox = data.bbox.map((value) => parseFloat(value.toFixed(4)));
+                    bboxInputs.x1.value = bbox[0];
+                    bboxInputs.y1.value = bbox[1];
+                    bboxInputs.x2.value = bbox[2];
+                    bboxInputs.y2.value = bbox[3];
+                } catch (error) {
+                    console.error('Error fetching random box:', error);
+                    errorMessage.textContent = 'Failed to fetch random box.';
+                } finally {
+                    updateUIState(false);
+                }
+            };
+
+            const handleRandomBoxClick = () => {
+                const isBenign = pathologySelect.value === '0';
+                const url = isBenign
+                    ? 'http://localhost:6688/api/random-benign-box'
+                    : 'http://localhost:6688/api/random-malignancy-box';
+                fetchRandomBox(url);
+            };
+
+            /**
+             * 下载图像
+             */
+            const downloadImage = () => {
+                if (!generatedImage) return;
+
+                const pathologyLabel = pathologySelect.value === '0' ? 'Benign' : 'Malignant';
+                const deviceLabel = deviceDict[deviceSelect.value] || 'Unknown';
+                const bbox = [bboxInputs.x1.value, bboxInputs.y1.value, bboxInputs.x2.value, bboxInputs.y2.value];
+                const filename = `Pathology_${pathologyLabel}_Device_${deviceLabel}_x1_${bbox[0]}_y1_${bbox[1]}_x2_${bbox[2]}_y2_${bbox[3]}.png`;
+
+                const a = document.createElement('a');
+                a.href = generatedImage;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            };
+
+            /**
+             * 清除生成的图像和状态
+             */
+            const clearAll = () => {
+                clearImageDisplay();
+                generatedImage = null;
+                bboxInputs.x1.value = 0.1;
+                bboxInputs.y1.value = 0.1;
+                bboxInputs.x2.value = 0.9;
+                bboxInputs.y2.value = 0.9;
+                pathologySelect.value = '0';
+                deviceSelect.value = '1';
+                errorMessage.textContent = '';
+                updateUIState(false);
+            };
+
+            /**
+             * 清除图片显示区域
+             */
+            const clearImageDisplay = () => {
+                imageBox1.innerHTML = '<div class="image-placeholder">No Image Available</div>';
+                imageBox2.innerHTML = '<div class="image-placeholder">No Image Available</div><div class="bounding-box" id="bounding-box"></div>';
+                boundingBox.style.display = 'none';
+            };
+
+            /**
+             * 在页面上显示图像和 Bounding Box
+             */
+            const displayImage = (imageUrl, bbox) => {
+                const imgHTML = `<img src="${imageUrl}" alt="Generated Image" class="thumbnail">`;
+                imageBox1.innerHTML = imgHTML;
+                imageBox2.innerHTML = imgHTML + '<div class="bounding-box" id="bounding-box"></div>';
+
+                const newBoundingBox = document.getElementById('bounding-box');
+                const [x1, y1, x2, y2] = bbox;
+                newBoundingBox.style.left = `${x1 * 100}%`;
+                newBoundingBox.style.top = `${y1 * 100}%`;
+                newBoundingBox.style.width = `${(x2 - x1) * 100}%`;
+                newBoundingBox.style.height = `${(y2 - y1) * 100}%`;
+                newBoundingBox.style.display = 'block';
+            };
+
+            // --- 事件监听器 ---
+            generateBtn.addEventListener('click', genImage);
+            randomBoxBtn.addEventListener('click', handleRandomBoxClick);
+            downloadBtn.addEventListener('click', downloadImage);
+            clearBtn.addEventListener('click', clearAll);
+            pathologySelect.addEventListener('change', updateRandomButtonText);
+
+            // --- 初始化 ---
+            getUserIP();
+            updateRandomButtonText();
+        });
+    </script>
+</body>
+
+</html>
