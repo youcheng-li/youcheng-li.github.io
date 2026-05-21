@@ -1,0 +1,1568 @@
+{
+  "screening": {
+    "BUSI-Benign-01": {
+      "latencyMs": 4352,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.817
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.183
+        }
+      ]
+    },
+    "BUSI-Benign-02": {
+      "latencyMs": 3610,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.853
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.147
+        }
+      ]
+    },
+    "BUSI-Benign-03": {
+      "latencyMs": 3266,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.953
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.047
+        }
+      ]
+    },
+    "BUSI-Benign-04": {
+      "latencyMs": 4082,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.768
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.232
+        }
+      ]
+    },
+    "BUSI-Benign-05": {
+      "latencyMs": 4805,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.775
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.225
+        }
+      ]
+    },
+    "BUSI-Benign-06": {
+      "latencyMs": 4302,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.727
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.273
+        }
+      ]
+    },
+    "BUSI-Benign-07": {
+      "latencyMs": 4673,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.752
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.248
+        }
+      ]
+    },
+    "BUSI-Benign-08": {
+      "latencyMs": 4077,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.789
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.211
+        }
+      ]
+    },
+    "BUSI-Benign-09": {
+      "latencyMs": 4677,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.864
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.136
+        }
+      ]
+    },
+    "BUSI-Benign-10": {
+      "latencyMs": 4536,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.791
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.209
+        }
+      ]
+    },
+    "BUSI-Benign-11": {
+      "latencyMs": 4132,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.956
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.044
+        }
+      ]
+    },
+    "BUSI-Benign-12": {
+      "latencyMs": 4802,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.86
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.14
+        }
+      ]
+    },
+    "BUSI-Benign-13": {
+      "latencyMs": 4659,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.916
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.084
+        }
+      ]
+    },
+    "BUSI-Benign-14": {
+      "latencyMs": 4521,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.729
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.271
+        }
+      ]
+    },
+    "BUSI-Benign-15": {
+      "latencyMs": 3426,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.892
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.108
+        }
+      ]
+    },
+    "BUSI-Benign-16": {
+      "latencyMs": 3874,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.885
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.115
+        }
+      ]
+    },
+    "BUSI-Benign-17": {
+      "latencyMs": 3102,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.812
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.188
+        }
+      ]
+    },
+    "BUSI-Benign-18": {
+      "latencyMs": 3542,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.774
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.226
+        }
+      ]
+    },
+    "BUSI-Benign-19": {
+      "latencyMs": 3110,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.844
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.156
+        }
+      ]
+    },
+    "BUSI-Benign-20": {
+      "latencyMs": 3554,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.891
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.109
+        }
+      ]
+    },
+    "BUSI-Malignant-01": {
+      "latencyMs": 4440,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.119
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.881
+        }
+      ]
+    },
+    "BUSI-Malignant-02": {
+      "latencyMs": 4587,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.104
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.896
+        }
+      ]
+    },
+    "BUSI-Malignant-03": {
+      "latencyMs": 4087,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.111
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.889
+        }
+      ]
+    },
+    "BUSI-Malignant-04": {
+      "latencyMs": 3718,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.206
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.794
+        }
+      ]
+    },
+    "BUSI-Malignant-05": {
+      "latencyMs": 3248,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.117
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.883
+        }
+      ]
+    },
+    "BUSI-Malignant-06": {
+      "latencyMs": 4886,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.145
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.855
+        }
+      ]
+    },
+    "BUSI-Malignant-07": {
+      "latencyMs": 3253,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.211
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.789
+        }
+      ]
+    },
+    "BUSI-Malignant-08": {
+      "latencyMs": 3408,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.219
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.781
+        }
+      ]
+    },
+    "BUSI-Malignant-09": {
+      "latencyMs": 3615,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.169
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.831
+        }
+      ]
+    },
+    "BUSI-Malignant-10": {
+      "latencyMs": 3243,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.034
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.966
+        }
+      ]
+    },
+    "BUSI-Malignant-11": {
+      "latencyMs": 3986,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.174
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.826
+        }
+      ]
+    },
+    "BUSI-Malignant-12": {
+      "latencyMs": 4726,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.16
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.84
+        }
+      ]
+    },
+    "BUSI-Malignant-13": {
+      "latencyMs": 4171,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.187
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.813
+        }
+      ]
+    },
+    "BUSI-Malignant-14": {
+      "latencyMs": 3983,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.239
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.761
+        }
+      ]
+    },
+    "BUSI-Malignant-15": {
+      "latencyMs": 3523,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.198
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.802
+        }
+      ]
+    },
+    "BUSI-Malignant-16": {
+      "latencyMs": 3881,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.243
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.757
+        }
+      ]
+    },
+    "BUSI-Malignant-17": {
+      "latencyMs": 4086,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.156
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.844
+        }
+      ]
+    },
+    "BUSI-Malignant-18": {
+      "latencyMs": 3190,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.2
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.8
+        }
+      ]
+    },
+    "BUSI-Malignant-19": {
+      "latencyMs": 4403,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.206
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.794
+        }
+      ]
+    },
+    "BUSI-Malignant-20": {
+      "latencyMs": 3647,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.156
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.844
+        }
+      ]
+    }
+  },
+  "subtype": {
+    "UDIAT-FA-01": {
+      "latencyMs": 3574,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.915
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.085
+        }
+      ]
+    },
+    "UDIAT-FA-02": {
+      "latencyMs": 3476,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.958
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.042
+        }
+      ]
+    },
+    "UDIAT-FA-03": {
+      "latencyMs": 3105,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.829
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.171
+        }
+      ]
+    },
+    "UDIAT-FA-04": {
+      "latencyMs": 3788,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.764
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.236
+        }
+      ]
+    },
+    "UDIAT-FA-05": {
+      "latencyMs": 4151,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.881
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.119
+        }
+      ]
+    },
+    "UDIAT-FA-06": {
+      "latencyMs": 4679,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.932
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.068
+        }
+      ]
+    },
+    "UDIAT-FA-07": {
+      "latencyMs": 3669,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.915
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.085
+        }
+      ]
+    },
+    "UDIAT-FA-08": {
+      "latencyMs": 4169,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.789
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.211
+        }
+      ]
+    },
+    "UDIAT-FA-09": {
+      "latencyMs": 4787,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.732
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.268
+        }
+      ]
+    },
+    "UDIAT-FA-10": {
+      "latencyMs": 4004,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.763
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.237
+        }
+      ]
+    },
+    "UDIAT-FA-11": {
+      "latencyMs": 4527,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.805
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.195
+        }
+      ]
+    },
+    "UDIAT-FA-12": {
+      "latencyMs": 3236,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.789
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.211
+        }
+      ]
+    },
+    "UDIAT-FA-13": {
+      "latencyMs": 4493,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.754
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.246
+        }
+      ]
+    },
+    "UDIAT-FA-14": {
+      "latencyMs": 4718,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.823
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.177
+        }
+      ]
+    },
+    "UDIAT-FA-15": {
+      "latencyMs": 4644,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.792
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.208
+        }
+      ]
+    },
+    "UDIAT-FA-16": {
+      "latencyMs": 3646,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.721
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.279
+        }
+      ]
+    },
+    "UDIAT-FA-17": {
+      "latencyMs": 4430,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.956
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.044
+        }
+      ]
+    },
+    "UDIAT-FA-18": {
+      "latencyMs": 4117,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.856
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.144
+        }
+      ]
+    },
+    "UDIAT-FA-19": {
+      "latencyMs": 3448,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.881
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.119
+        }
+      ]
+    },
+    "UDIAT-FA-20": {
+      "latencyMs": 3338,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.755
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.245
+        }
+      ]
+    },
+    "UDIAT-DCIS-01": {
+      "latencyMs": 3337,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.111
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.889
+        }
+      ]
+    },
+    "UDIAT-DCIS-02": {
+      "latencyMs": 4096,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.062
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.938
+        }
+      ]
+    },
+    "UDIAT-DCIS-03": {
+      "latencyMs": 4878,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.26
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.74
+        }
+      ]
+    },
+    "UDIAT-DCIS-04": {
+      "latencyMs": 3434,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.073
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.927
+        }
+      ]
+    },
+    "UDIAT-DCIS-05": {
+      "latencyMs": 3369,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.097
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.903
+        }
+      ]
+    },
+    "UDIAT-DCIS-06": {
+      "latencyMs": 3260,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.273
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.727
+        }
+      ]
+    },
+    "UDIAT-DCIS-07": {
+      "latencyMs": 3322,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.187
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.813
+        }
+      ]
+    },
+    "UDIAT-DCIS-08": {
+      "latencyMs": 4213,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.221
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.779
+        }
+      ]
+    },
+    "UDIAT-DCIS-09": {
+      "latencyMs": 4823,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.138
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.862
+        }
+      ]
+    },
+    "UDIAT-DCIS-10": {
+      "latencyMs": 4729,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.179
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.821
+        }
+      ]
+    },
+    "UDIAT-DCIS-11": {
+      "latencyMs": 3241,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.216
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.784
+        }
+      ]
+    },
+    "UDIAT-DCIS-12": {
+      "latencyMs": 3226,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.22
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.78
+        }
+      ]
+    },
+    "UDIAT-DCIS-13": {
+      "latencyMs": 4480,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.132
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.868
+        }
+      ]
+    },
+    "UDIAT-DCIS-14": {
+      "latencyMs": 4570,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.036
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.964
+        }
+      ]
+    },
+    "UDIAT-DCIS-15": {
+      "latencyMs": 3366,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.11
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.89
+        }
+      ]
+    },
+    "UDIAT-DCIS-16": {
+      "latencyMs": 4270,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.27
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.73
+        }
+      ]
+    },
+    "UDIAT-DCIS-17": {
+      "latencyMs": 4636,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.132
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.868
+        }
+      ]
+    },
+    "UDIAT-DCIS-18": {
+      "latencyMs": 3558,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.099
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.901
+        }
+      ]
+    },
+    "UDIAT-DCIS-19": {
+      "latencyMs": 4006,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.108
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.892
+        }
+      ]
+    },
+    "UDIAT-DCIS-20": {
+      "latencyMs": 3834,
+      "probabilities": [
+        {
+          "label": "FA",
+          "probability": 0.115
+        },
+        {
+          "label": "DCIS",
+          "probability": 0.885
+        }
+      ]
+    }
+  },
+  "diagnosis": {
+    "BUS-BRA-Benign-01": {
+      "latencyMs": 3143,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.777
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.223
+        }
+      ]
+    },
+    "BUS-BRA-Benign-02": {
+      "latencyMs": 4090,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.956
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.044
+        }
+      ]
+    },
+    "BUS-BRA-Benign-03": {
+      "latencyMs": 4004,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.83
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.17
+        }
+      ]
+    },
+    "BUS-BRA-Benign-04": {
+      "latencyMs": 4586,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.884
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.116
+        }
+      ]
+    },
+    "BUS-BRA-Benign-05": {
+      "latencyMs": 4017,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.825
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.175
+        }
+      ]
+    },
+    "BUS-BRA-Benign-06": {
+      "latencyMs": 3291,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.818
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.182
+        }
+      ]
+    },
+    "BUS-BRA-Benign-07": {
+      "latencyMs": 3950,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.961
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.039
+        }
+      ]
+    },
+    "BUS-BRA-Benign-08": {
+      "latencyMs": 4566,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.814
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.186
+        }
+      ]
+    },
+    "BUS-BRA-Benign-09": {
+      "latencyMs": 4894,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.872
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.128
+        }
+      ]
+    },
+    "BUS-BRA-Benign-10": {
+      "latencyMs": 4441,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.913
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.087
+        }
+      ]
+    },
+    "BUS-BRA-Benign-11": {
+      "latencyMs": 4620,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.872
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.128
+        }
+      ]
+    },
+    "BUS-BRA-Benign-12": {
+      "latencyMs": 3297,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.924
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.076
+        }
+      ]
+    },
+    "BUS-BRA-Benign-13": {
+      "latencyMs": 4383,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.889
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.111
+        }
+      ]
+    },
+    "BUS-BRA-Benign-14": {
+      "latencyMs": 3817,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.935
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.065
+        }
+      ]
+    },
+    "BUS-BRA-Benign-15": {
+      "latencyMs": 3520,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.967
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.033
+        }
+      ]
+    },
+    "BUS-BRA-Benign-16": {
+      "latencyMs": 4708,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.847
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.153
+        }
+      ]
+    },
+    "BUS-BRA-Benign-17": {
+      "latencyMs": 3698,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.902
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.098
+        }
+      ]
+    },
+    "BUS-BRA-Benign-18": {
+      "latencyMs": 4264,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.786
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.214
+        }
+      ]
+    },
+    "BUS-BRA-Benign-19": {
+      "latencyMs": 3291,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.875
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.125
+        }
+      ]
+    },
+    "BUS-BRA-Benign-20": {
+      "latencyMs": 4879,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.934
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.066
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-01": {
+      "latencyMs": 3740,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.113
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.887
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-02": {
+      "latencyMs": 4170,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.082
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.918
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-03": {
+      "latencyMs": 4680,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.152
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.848
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-04": {
+      "latencyMs": 3286,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.086
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.914
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-05": {
+      "latencyMs": 4757,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.123
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.877
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-06": {
+      "latencyMs": 3142,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.062
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.938
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-07": {
+      "latencyMs": 4240,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.154
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.846
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-08": {
+      "latencyMs": 3721,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.137
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.863
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-09": {
+      "latencyMs": 4679,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.108
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.892
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-10": {
+      "latencyMs": 4315,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.12
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.88
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-11": {
+      "latencyMs": 4738,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.065
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.935
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-12": {
+      "latencyMs": 3156,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.087
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.913
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-13": {
+      "latencyMs": 3226,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.241
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.759
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-14": {
+      "latencyMs": 4089,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.052
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.948
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-15": {
+      "latencyMs": 3479,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.155
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.845
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-16": {
+      "latencyMs": 4244,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.064
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.936
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-17": {
+      "latencyMs": 4774,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.073
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.927
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-18": {
+      "latencyMs": 3451,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.259
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.741
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-19": {
+      "latencyMs": 4118,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.243
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.757
+        }
+      ]
+    },
+    "BUS-BRA-Malignant-20": {
+      "latencyMs": 3863,
+      "probabilities": [
+        {
+          "label": "Benign",
+          "probability": 0.146
+        },
+        {
+          "label": "Malignant",
+          "probability": 0.854
+        }
+      ]
+    }
+  }
+}
